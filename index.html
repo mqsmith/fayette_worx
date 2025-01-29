@@ -210,38 +210,38 @@
 								<div class="main-content">
 									<div class="row"> 
 										<div class="col-lg-6 ">
-											<form class="contact-form">
+											<form class="contact-form" action="mailto:example@email.com?subject=New%20Project" method="post" enctype="text/plain">
+												  <!-- form-item -->
+												  <div class="form-item">
+												    <input class="form-control" type="text" name="name" placeholder="Name" />
+												  </div>
+												  <!-- End / form-item -->
 												
-												<!-- form-item -->
-												<div class="form-item">
-													<input class="form-control" type="text" name="input" placeholder="name"/>
-												</div><!-- End / form-item -->
+												  <!-- form-item -->
+												  <div class="form-item">
+												    <input class="form-control" type="email" name="email" placeholder="Email" />
+												  </div>
+												  <!-- End / form-item -->
 												
+												  <!-- form-item -->
+												  <div class="form-item">
+												    <input class="form-control" type="tel" name="phone" placeholder="Phone" />
+												  </div>
+												  <!-- End / form-item -->
 												
-												<!-- form-item -->
-												<div class="form-item">
-													<input class="form-control" type="text" name="input" placeholder="email"/>
-												</div><!-- End / form-item -->
+												  <!-- form-item -->
+												  <div class="form-item">
+												    <input class="form-control" type="text" name="subject" placeholder="Subject" />
+												  </div>
+												  <!-- End / form-item -->
 												
+												  <!-- form-item -->
+												  <div class="form-item">
+												    <textarea name="message" placeholder="Message" style="height: 150px;"></textarea>
+												  </div>
+												  <!-- End / form-item -->
 												
-												<!-- form-item -->
-												<div class="form-item">
-													<input class="form-control" type="text" name="input" placeholder="phone"/>
-												</div><!-- End / form-item -->
-												
-												
-												<!-- form-item -->
-												<div class="form-item">
-													<input class="form-control" type="text" name="input" placeholder="subject"/>
-												</div><!-- End / form-item -->
-												
-												
-												<!-- form-item -->
-												<div class="form-item">
-													<textarea name="message" placeholder="Message" style="height: 150px;"></textarea>
-												</div><!-- End / form-item -->
-												
-												<button href="mailto:example@email.com?subject=New%20Project" class="btn btn-primary btn-round mb-30" type="submit">Send message</button>
+												  <button class="btn btn-primary btn-round mb-30" type="submit">Send message</button>
 											</form>
 										</div>
 									</div>
