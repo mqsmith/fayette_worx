@@ -210,39 +210,32 @@
 								<div class="main-content">
 									<div class="row"> 
 										<div class="col-lg-6 ">
-											<form class="contact-form" action="mailto:example@email.com?subject=New%20Project" method="post" enctype="text/plain">
-												  <!-- form-item -->
-												  <div class="form-item">
-												    <input class="form-control" type="text" name="name" placeholder="Name" />
-												  </div>
-												  <!-- End / form-item -->
-												
-												  <!-- form-item -->
-												  <div class="form-item">
-												    <input class="form-control" type="email" name="email" placeholder="Email" />
-												  </div>
-												  <!-- End / form-item -->
-												
-												  <!-- form-item -->
-												  <div class="form-item">
-												    <input class="form-control" type="tel" name="phone" placeholder="Phone" />
-												  </div>
-												  <!-- End / form-item -->
-												
-												  <!-- form-item -->
-												  <div class="form-item">
-												    <input class="form-control" type="text" name="subject" placeholder="Subject" />
-												  </div>
-												  <!-- End / form-item -->
-												
-												  <!-- form-item -->
-												  <div class="form-item">
-												    <textarea name="message" placeholder="Message" style="height: 150px;"></textarea>
-												  </div>
-												  <!-- End / form-item -->
-												
-												  <button class="btn btn-primary btn-round mb-30" type="submit">Send message</button>
+											<form class="contact-form" onsubmit="sendEmail(event)">
+											  <!-- form-item -->
+											  <div class="form-item">
+											    <input class="form-control" type="text" id="name" placeholder="Name" />
+											  </div>
+											
+											  <div class="form-item">
+											    <input class="form-control" type="email" id="email" placeholder="Email" />
+											  </div>
+											
+											  <div class="form-item">
+											    <input class="form-control" type="tel" id="phone" placeholder="Phone" />
+											  </div>
+											
+											  <div class="form-item">
+											    <input class="form-control" type="text" id="subject" placeholder="Subject" />
+											  </div>
+											
+											  <div class="form-item">
+											    <textarea id="message" placeholder="Message" style="height: 150px;"></textarea>
+											  </div>
+											
+											  <button class="btn btn-primary btn-round mb-30" type="submit">Send message</button>
 											</form>
+											
+
 										</div>
 									</div>
 								</div>
@@ -285,5 +278,28 @@
 		<script type="text/javascript" src="assets/vendors/jquery.waypoints/jquery.waypoints.min.js"></script>
 		<!-- App-->
 		<script type="text/javascript" src="assets/js/main.js"></script>
+
+
+		<script>
+		  function sendEmail(event) {
+		    event.preventDefault(); // Prevent the default form submission
+		
+		    // Get form values
+		    const name = document.getElementById("name").value;
+		    const email = document.getElementById("email").value;
+		    const phone = document.getElementById("phone").value;
+		    const subject = document.getElementById("subject").value;
+		    const message = document.getElementById("message").value;
+		
+		    // Construct mailto link
+		const mailtoLink = `mailto:smith.mike@mac.com,mike@mikeqsmith.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+			`Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0A%0A${message}`
+		)}`;
+		
+		    // Open the mail client
+		    window.location.href = mailtoLink;
+		  }
+		</script>
+
 	</body>
 </html>
