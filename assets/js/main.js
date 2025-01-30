@@ -165,30 +165,22 @@
     }
   });
 
-  window.sendEmail = function sendEmail(event) {
-    event.preventDefault(); // Prevent default form submission
+document.getElementById("send-email").addEventListener("click", function() {
+    // Get form values
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const subject = document.getElementById("subject").value;
+    const message = document.getElementById("message").value;
 
-    // Get form values safely
-    const name = document.getElementById("name")?.value.trim() || "No Name Provided";
-    const email = document.getElementById("email")?.value.trim() || "No Email Provided";
-    const phone = document.getElementById("phone")?.value.trim() || "No Phone Provided";
-    const subject = document.getElementById("subject")?.value.trim() || "No Subject";
-    const message = document.getElementById("message")?.value.trim() || "No Message";
-
-    // Validate required fields
-    if (!subject || !message) {
-      alert("Please enter a subject and a message before sending.");
-      return;
-    }
-
-    // Construct mailto link with multiple recipients
+    // Construct mailto link
     const mailtoLink = `mailto:smith.mike@mac.com,mike@mikeqsmith.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-      `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0A%0A${message}`
+        `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0A%0A${message}`
     )}`;
 
-    // Open the user's mail client
+    // Open the user's default email client
     window.location.href = mailtoLink;
-  }
+});
 
   /**
    * Header interactions
