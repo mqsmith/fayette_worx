@@ -210,32 +210,14 @@
 								<div class="main-content">
 									<div class="row"> 
 										<div class="col-lg-6 ">
-											<form class="contact-form" onsubmit="sendEmail(event)">
-											  <!-- form-item -->
-											  <div class="form-item">
-											    <input class="form-control" type="text" id="name" placeholder="Name" />
-											  </div>
-											
-											  <div class="form-item">
-											    <input class="form-control" type="email" id="email" placeholder="Email" />
-											  </div>
-											
-											  <div class="form-item">
-											    <input class="form-control" type="tel" id="phone" placeholder="Phone" />
-											  </div>
-											
-											  <div class="form-item">
-											    <input class="form-control" type="text" id="subject" placeholder="Subject" />
-											  </div>
-											
-											  <div class="form-item">
-											    <textarea id="message" placeholder="Message" style="height: 150px;"></textarea>
-											  </div>
-											
-											  <button class="btn btn-primary btn-round mb-30" type="submit">Send message</button>
+											<form id="contact-form">
+											    <input id="name" type="text" name="name" placeholder="Name" />
+											    <input id="email" type="email" name="email" placeholder="Email" />
+											    <input id="phone" type="tel" name="phone" placeholder="Phone" />
+											    <input id="subject" type="text" name="subject" placeholder="Subject" />
+											    <textarea id="message" name="message" placeholder="Message" style="height: 150px;"></textarea>
+											    <button id="send-email" class="btn btn-primary btn-round mb-30" type="button">Send Message</button>
 											</form>
-											
-
 										</div>
 									</div>
 								</div>
