@@ -279,27 +279,5 @@
 		<!-- App-->
 		<script type="text/javascript" src="assets/js/main.js"></script>
 
-
-		<script>
-		  function sendEmail(event) {
-		    event.preventDefault(); // Prevent the default form submission
-		
-		    // Get form values
-		    const name = document.getElementById("name").value;
-		    const email = document.getElementById("email").value;
-		    const phone = document.getElementById("phone").value;
-		    const subject = document.getElementById("subject").value;
-		    const message = document.getElementById("message").value;
-		
-		    // Construct mailto link
-		const mailtoLink = `mailto:smith.mike@mac.com,mike@mikeqsmith.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-			`Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0A%0A${message}`
-		)}`;
-		
-		    // Open the mail client
-		    window.location.href = mailtoLink;
-		  }
-		</script>
-
 	</body>
 </html>
