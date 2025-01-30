@@ -165,7 +165,7 @@
     }
   });
 
-  function sendEmail(event) {
+  window.sendEmail = function sendEmail(event) {
     event.preventDefault(); // Prevent default form submission
 
     // Get form values safely
