@@ -18,6 +18,32 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/main.css"><!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<![endif]-->
+		    <script>
+		        function copyText(elementId) {
+		            console.log("copyText function is called"); // Add this line for debugging
+		            // Get the text from the specified element
+		            var text = document.getElementById(elementId).innerText;
+		
+		            // Create a temporary textarea element to hold the text
+		            var tempTextArea = document.createElement("textarea");
+		            tempTextArea.value = text;
+		
+		            // Append the textarea to the body (required for copying)
+		            document.body.appendChild(tempTextArea);
+		
+		            // Select the text
+		            tempTextArea.select();
+		
+		            // Execute the copy command
+		            document.execCommand("copy");
+		
+		            // Remove the temporary textarea element
+		            document.body.removeChild(tempTextArea);
+		
+		            // Optionally, provide feedback to the user
+		            alert("Text copied: " + text);
+		        }
+    		</script>
 	</head>
 	
 	<body>
