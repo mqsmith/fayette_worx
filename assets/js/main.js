@@ -152,32 +152,6 @@ if (selector.length > 0) {
 	thumbnails(self.next('.swiper-thumbnails'));
 });
 
-
-function copyText(elementId) {
-	console.log(elementId);
-            // Get the text from the specified element
-	    
-            var text = $('#textToCopy');
-
-            // Create a temporary textarea element to hold the text
-            var tempTextArea = document.createElement("textarea");
-            tempTextArea.value = text;
-
-            // Append the textarea to the body (required for copying)
-            document.body.appendChild(tempTextArea);
-
-            // Select the text
-            tempTextArea.select();
-
-            // Execute the copy command
-            document.execCommand("copy");
-
-            // Remove the temporary textarea element
-            document.body.removeChild(tempTextArea);
-
-            // Optionally, provide feedback to the user
-            alert("Text copied: " + text);
-        }
 /**
  * Header
  */
