@@ -210,14 +210,11 @@
 								<div class="main-content">
 									<div class="row"> 
 										<div class="col-lg-6 ">
-											<form id="contact-form">
-											    <input id="name" type="text" name="name" placeholder="Name" />
-											    <input id="email" type="email" name="email" placeholder="Email" />
-											    <input id="phone" type="tel" name="phone" placeholder="Phone" />
-											    <input id="subject" type="text" name="subject" placeholder="Subject" />
-											    <textarea id="message" name="message" placeholder="Message" style="height: 150px;"></textarea>
-											    <button id="send-email" class="btn btn-primary btn-round mb-30" type="button"><a href:="mailto:smith.mike@mac.com,mike@mikeqsmith.com">Send Message</a></button>
-											</form>
+										    <div>
+											<span>If you want more info on the services we provide, please shoot us as email at:</span>
+										        <span id="textToCopy">smith.mike@mac.com</span>
+										        <button onclick="copyText('textToCopy')">Copy Email</button>
+										    </div>
 										</div>
 									</div>
 								</div>
