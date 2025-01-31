@@ -154,8 +154,10 @@ if (selector.length > 0) {
 
 
 function copyText(elementId) {
+	console.log(elementId);
             // Get the text from the specified element
-            var text = document.getElementById(elementId).innerText;
+	    
+            var text = $('#textToCopy');
 
             // Create a temporary textarea element to hold the text
             var tempTextArea = document.createElement("textarea");
