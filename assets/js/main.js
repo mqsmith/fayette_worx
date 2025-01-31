@@ -166,6 +166,7 @@
   });
 
 document.getElementById("send-email").addEventListener("click", function() {
+  console.log("Button clicked!");
     // Get form values
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
@@ -177,7 +178,7 @@ document.getElementById("send-email").addEventListener("click", function() {
     const mailtoLink = `mailto:smith.mike@mac.com,mike@mikeqsmith.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
         `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0A%0A${message}`
     )}`;
-
+    console.log("mailto:", mailtoLink);
     // Open the user's default email client
     window.location.href = mailtoLink;
 });
